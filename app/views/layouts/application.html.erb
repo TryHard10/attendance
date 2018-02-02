@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if access_signed_in?%>
+      <%= render "panel"%>
+    <%end%>
   	<!--p class="notice"><%= notice%></p>
   	<p class="alert"><%= alert%></p-->
     <%= yield %>

@@ -1,5 +1,10 @@
 class WelcomeController < ApplicationController
 	def login
-		redirect_to new_access_session_path
-	end
+		
+		if access_signed_in?
+			redirect_to "/panel"
+		else			
+			redirect_to new_access_session_path		
+		end		
+	end	
 end
