@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 # README
 
+do: rake db:setup
+
 Access:
 username: attendance@tryhard.com
 password: tryhard
