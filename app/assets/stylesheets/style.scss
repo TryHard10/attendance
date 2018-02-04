@@ -128,12 +128,12 @@
 {
 }
 
-#main_container
+#main-container
 {	
 	background-color: rgba(0,0,0,0.03);
 }
 
-#main_container,
+#main-container,
 #header-aside-left,
 #header-aside-right
 {
@@ -145,7 +145,7 @@
 	width: 18%;
 	height: 100%;
 }
-#main_container,
+#main-container,
 #header-aside-right
 {
 	left: 18%;
@@ -153,11 +153,6 @@
 	height: 60px;
 }
 
-#main_container
-{
-	height: 100%;
-	z-index: -999;
-}
 #header-aside-right
 {
 	z-index: 9999;
@@ -311,4 +306,70 @@
 	height: 50px !important;
 	background-image: url('log_off_icon.png');
 	background-size: 100% 100%;
+}
+
+/*Panel*/
+
+#main-container
+{
+	height: 100%;
+	z-index: -999;
+}
+
+.panel-menu
+{
+	width: 95%;	
+	height: 60px;
+	margin-top: 90px;
+	margin-left:5%;
+}
+
+.panel-menu .item
+{
+	width: 225px;
+	height: 60px;
+	display: inline-flex;
+}
+
+.panel-menu .item .icon-item,
+.panel-menu .item .text-item
+{
+	position: absolute !important;
+	height: 60px;
+}
+
+.panel-menu .item .icon-item
+{
+	width: 60px;
+	z-index: 9999;	
+	background-size: 100% 100%;
+}
+
+.panel-menu .item .text-item
+{
+	position: relative;
+	margin: 10px 0 0 10px;
+	height: 40px;
+	width: 195px;
+}
+
+.middle-text
+{
+	position: absolute;
+	text-align: center;
+	width: 80%;
+	left: 35%;
+	top: 50%;
+    transform: translate(-20%, -50%);
+    -webkit-transform: translate(-20%, -50%);
+}
+
+.panel-menu .item:nth-child(1) .icon-item
+{
+	background-image: url('plus_icon.png');
+}
+
+.panel-menu .item:nth-child(2) .icon-item
+{
+	background-image: url('groups_icon.png');
 }
