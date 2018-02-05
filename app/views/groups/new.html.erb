@@ -1,0 +1,20 @@
+<%= render "options"%>
+
+<div class="groups">
+	<div class="be-white container-left-form box-radius">
+		<div class="form-container">
+		  <div class="topic-form text-center">
+			<h2>Create a group</h2>
+		  </div>
+		  <%= form_for (@group)  do |f| %>
+			<div class="field">
+				<%= f.text_field :name, placeholder: "Group Name", class: "form-control gray-border-bottom"%>
+			</div>
+			<div class="actions top-space">
+				<%= f.submit "Save", class: "btn-two be-aqua white large-padding"%>
+			</div>
+		  <%end%>
+		  <!---%= render "devise/shared/links" %-->
+		</div> 
+	</div>
+</div>

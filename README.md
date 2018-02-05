@@ -1,7 +1,9 @@
 <<<<<<< HEAD
 # README
 
-do: rake db:setup
+Implement :
+
+rake db:setup
 
 Access:
 username: attendance@tryhard.com

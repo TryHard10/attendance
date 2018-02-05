@@ -1,0 +1,56 @@
+
+<div id="main-container">
+	<div class="panel-menu">
+		<div class="item">
+			<div class="icon-item"></div>
+			<div class="text-item be-white">
+				<%= link_to "ADD USER",  new_group_user_path(@group), class: "middle-text no-list strong-gray"%>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="icon-item"></div>
+			<div class="text-item be-white">
+				<%= link_to "GROUPS", "/groups", class: "middle-text no-list strong-gray"%>
+			</div>
+		</div>
+	</div>	
+</div>
+<!--%= render "options"%-->
+
+
+
+<div class="groups">
+	<div class="info-container">
+		<div class="header-table-two">
+			<div class="be-white">
+				<p>Name</p>
+			</div>
+			<div class="be-white">
+				<p>Delete</p>
+			</div>
+			<div class="be-white">
+				<p>Take</p>
+			</div>
+		</div>
+		<div class="list">
+			<% @users.each do |user|%>
+				<div class="table-row be-white gray-border-bottom">
+					<div class="item-1">
+						<p><%= user.name %></p>						
+					</div>
+					<div class="item-2">
+						<a href=<%= "" %>>
+							<div class="table-icon delete"></div>	
+						</a>
+					</div>
+					<div class="item-3">
+						<a href=<%= "" %>>
+							<div class="table-icon take"></div>
+						</a>
+					</div>			
+				</div>
+			<%end%>		
+		</div>
+	</div>
+</div>

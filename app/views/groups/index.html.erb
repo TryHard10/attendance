@@ -1,0 +1,33 @@
+<%= render "options"%>
+
+<div class="groups">
+	<div class="info-container">
+		<div class="header-table-one be-white">
+			<div>
+				<p>Name</p>
+			</div>
+			<div>
+				<p>Action</p>
+			</div>
+		</div>
+		<div class="list">
+			<% @groups.each do |group|%>
+				<div class="table-row be-white gray-border-bottom">
+					<div class="item-1">
+						<p><%= group.name %></p>						
+					</div>
+					<div class="item-2">
+						<a href=<%= "groups/" + (group.id).to_s %>>
+							<div class="table-icon delete"></div>	
+						</a>
+					</div>
+					<div class="item-3">
+						<a href=<%= "groups/" + (group.id).to_s %>>
+							<div class="table-icon check"></div>
+						</a>
+					</div>			
+				</div>
+			<%end%>		
+		</div>
+	</div>
+</div>

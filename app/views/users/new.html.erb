@@ -1,0 +1,40 @@
+<div id="main-container">
+	<div class="panel-menu">
+		<div class="item">
+			<div class="icon-item"></div>
+			<div class="text-item be-white">
+				<%= link_to "ADD USER",  new_group_user_path(@group), class: "middle-text no-list strong-gray"%>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="icon-item"></div>
+			<div class="text-item be-white">
+				<%= link_to "GROUPS", "/groups", class: "middle-text no-list strong-gray"%>
+			</div>
+		</div>
+	</div>	
+</div>
+
+
+
+<div class="groups">
+	<div class="be-white container-left-form box-radius">
+		<div class="form-container">
+		  <div class="topic-form text-center">
+			<h2>Create a user</h2>
+		  </div>
+		  <%= form_for ([@group,@user])  do |f| %>
+			<div class="field">
+				<%= f.text_field :name, placeholder: "Name", class: "form-control gray-border-bottom"%>
+			</div>
+			<div class="actions top-space">
+				<%= f.submit "Save", class: "btn-two be-aqua white large-padding"%>
+			</div>
+		  <%end%>
+		  <!---%= render "devise/shared/links" %-->
+		</div> 
+	</div>
+</div>
+
+
